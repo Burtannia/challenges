@@ -1,0 +1,41 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           challenges
+version:        0.1.0.0
+synopsis:       A Haskell project
+description:    See https://hackage.haskell.org/package/challenges/docs/Challenges.html
+author:         James Burton
+maintainer:     James Burton
+copyright:      2025 James Burton
+license:        BSD-2-Clause-Patent
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Challenges
+      DailyTemps
+      Kangaroo
+      MonotonicStack
+      NextGreaterElem
+      RotateList
+      WiggleSort
+  other-modules:
+      Paths_challenges
+  autogen-modules:
+      Paths_challenges
+  hs-source-dirs:
+      lib
+  ghc-options: -Wall -Wcompat -Widentities -Wredundant-constraints -Wmissing-deriving-strategies -Wunused-packages -Winvalid-haddock -Wredundant-bang-patterns -Woperator-whitespace -Wredundant-strictness-flags -O1
+  build-depends:
+      base ==4.*
+    , containers
+    , mtl
+    , random
+    , unordered-containers
+    , vector
+  default-language: GHC2021
