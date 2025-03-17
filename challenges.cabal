@@ -18,7 +18,9 @@ build-type:     Simple
 library
   exposed-modules:
       Challenges
+      ClimbingLeaderboard
       DailyTemps
+      DiagonalDiff
       DNAHealth
       Kangaroo
       MonotonicStack

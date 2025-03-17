@@ -241,6 +241,10 @@ count str (Node ((pref, t) : es))
     -- searching the remaining edges
     | otherwise = count str (Node es)
 
+-- O(m + k) where m is the length of
+-- each gene and k is the number of times
+-- it appears in the strand (since we will
+-- need to count the number of subtrees).
 strandHealth :: Vector Gene -> Strand -> Int
 strandHealth gs0 strand =
     foldl' (\acc g -> acc + countGene g) 0 gs
@@ -249,6 +253,7 @@ strandHealth gs0 strand =
         t = suffixTree strand.d.inner
         countGene g = g.health * count g.str t
 
+-- O(n)
 minMax :: Ord b => (a -> b) -> [a] -> (b, b)
 minMax _ [] = error "can't minMax empty list"
 minMax f (x:xs) = execState (go xs) initState
@@ -264,6 +269,16 @@ minMax f (x:xs) = execState (go xs) initState
             put (mn1, mx1)
             go ys
 
+-- Overall this is O(n^2 * (m + k)) where O(n^2) is
+-- the construction of the suffix tree, which
+-- likely dominates the complexity, and
+-- O(m + k) is the length of the genes per strand
+-- and the number of times they occur in the strand.
+--
+-- If we were to reach for a complex algorithm
+-- for construction, we would be able to get that
+-- part down to O(n) which, would bring the overall
+-- time to O(n * (m + k)).
 minMaxHealths :: [Strand] -> Vector Gene -> (Int, Int)
 minMaxHealths strands genes = minMax (strandHealth genes) strands
 
