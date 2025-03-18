@@ -23,9 +23,14 @@ library
       DiagonalDiff
       DNAHealth
       Kangaroo
+      LongestSubarray
+      MinimiseLoss
+      MissingNumbers
       MonotonicStack
       NextGreaterElem
+      NonDivSubset
       RotateList
+      SubarrayMins
       WiggleSort
   other-modules:
       Paths_challenges
