@@ -47,6 +47,7 @@
           dependencies = [
             "containers"
             "unordered-containers"
+            "heaps"
             "mtl"
             "vector"
             "random"

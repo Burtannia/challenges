@@ -23,12 +23,14 @@ library
       DiagonalDiff
       DNAHealth
       Kangaroo
+      LonelyInt
       LongestSubarray
       MinimiseLoss
       MissingNumbers
       MonotonicStack
       NextGreaterElem
       NonDivSubset
+      QueensAttack
       RotateList
       SubarrayMins
       WiggleSort
@@ -42,6 +44,7 @@ library
   build-depends:
       base ==4.*
     , containers
+    , heaps
     , mtl
     , random
     , unordered-containers
