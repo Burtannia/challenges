@@ -17,22 +17,28 @@ build-type:     Simple
 
 library
   exposed-modules:
+      CaesarCipher
       Challenges
       ClimbingLeaderboard
       DailyTemps
       DiagonalDiff
       DNAHealth
+      GridChallenge
       Kangaroo
       LonelyInt
       LongestSubarray
       MinimiseLoss
       MissingNumbers
       MonotonicStack
+      Mut
+      NewYearChaos
       NextGreaterElem
       NonDivSubset
       QueensAttack
+      RomanNumerals
       RotateList
       SubarrayMins
+      TowerBreakers
       WiggleSort
   other-modules:
       Paths_challenges

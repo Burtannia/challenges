@@ -46,6 +46,8 @@ unicode: never
 # Give the programmer more choice on where to insert blank lines
 respectful: true
 
+trailing-section-operators: false
+
 # Rules for grouping import declarations
 import-grouping: by-scope
 
